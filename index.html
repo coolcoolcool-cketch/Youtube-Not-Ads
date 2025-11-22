@@ -4,15 +4,12 @@
 </head>
 <body>
 
-<button onclick="go()">Youtube Not Ads</button>
+<button onclick="openHidden()">Youtube Not Ads</button>
 
 <script>
-function go() {
-    // Скрытая ссылка
-    var a = "https://";
-    var b = "youtu";
-    var c = ".be/dQw4w9WgXcQ"; // рикролл
-    window.location.href = a + b + c;
+function openHidden() {
+    let encoded = "aHR0cHM6Ly95b3V0dS5iZS9kUXc0dzlXZ1hjUT9zaT14TkVxSGlpVFFabzNNNnBK";
+    window.location.href = atob(encoded);
 }
 </script>
 
